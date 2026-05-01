@@ -1,0 +1,31 @@
+# Problem Statement: You are given an array. The task is to reverse the array and print it.
+
+# Examples
+# Input: N = 5, arr[] = {5,4,3,2,1}
+# Output: {1,2,3,4,5}
+# Explanation: Since the order of elements gets reversed the first element will occupy the fifth position,
+# the second element occupies the fourth position and so on.
+
+# Input: N=6 arr[] = {10,20,30,40}
+# Output: {40,30,20,10}
+# Explanation: Since the order of elements gets reversed the first element will occupy the fifth position, 
+# the second element occupies the fourth position and so on.
+
+
+def reverse_num(arr):
+  left = 0
+  right = len(arr)-1
+  # while left < right:
+  #   arr[left],arr[right] = arr[right],arr[left]
+  #   right -=1
+  #   left +=1
+
+
+  while right > left:
+    arr[right],arr[left] = arr[left],arr[right]
+    left +=1
+    right -=1
+   
+  return arr
+arr = list(map(int,input().split()))
+print(reverse_num(arr))
